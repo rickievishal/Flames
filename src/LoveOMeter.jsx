@@ -144,18 +144,18 @@ const LoveOMeter = () => {
 
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white px-4 py-8">
+    <div className="min-h-screen flex flex-col items-center justify-start bg-white px-4 py-[100px]">
       {/* Title */}
-      <h1 className="text-3xl font-bold font-jetbrains text-[#FFC0CB] mb-[25px]">Love=O-Meter</h1>
+      <h1 className="text-3xl font-bold font-jetbrains text-[#ff7289] mb-[25px]">FlaMeUp</h1>
 
       {/* Image */}
 
       {last&& (!five  &&
-      (idontsee ? <img src={dontsee} alt="love" className="w-32 h-32 mb-[70px]" />:<img src={loveImage} alt="love" className="w-32 h-32 mb-[70px]" />)
+      (idontsee ? <img src={dontsee} alt="love" className="w-[200px] h-[200px] mb-[70px]" />:<img src={loveImage} alt="love" className="w-[200px] h-[200px] mb-[70px]" />)
       )}
       
-      {five && <img src={Flamesgif[Flames]} alt="love" className="w-32 h-32 mb-[70px]" /> }
-      {tension && (<img src={tension2} alt="love" className="w-32 h-32 mb-[70px]" /> ) }
+      {five && <img src={Flamesgif[Flames]} alt="love" className="w-[200px] h-[200px] mb-[70px]" /> }
+      {tension && (<img src={tension2} alt="love" className="w-[200px] h-[200px] mb-[70px]" /> ) }
 
       {/* Funny Text */}
       <p className="text-[#CBA6F7] font-jetbrains text-center italic max-w-md mb-[50px]">
@@ -163,7 +163,7 @@ const LoveOMeter = () => {
       </p>
 
       {/* Input Fields */}
-      <div className="flex flex-col mb-5 md:flex-row gap-40">
+      <div className="flex flex-col mb-5 md:flex-row gap-8 sm:gap-40">
         {/* Your Name Input */}
         <input
           type="text"
@@ -204,17 +204,17 @@ const LoveOMeter = () => {
       </div>
 
       {/* Button */}
-      <div className="mb-10 mt-5">
+      <div className="py-[50px] pt-[25px] sm:py-[100px] sm:pt-[50px]">
         <button
           onClick={Setvaluefun}
-          className="bg-[#FFC0CB] px-6 py-2 font-jetbrains font-bold rounded-sm shadow-xl text-gray-100"
+          className="bg-[#ff6e86] px-6 py-2 font-jetbrains font-bold rounded-r-full rounded-l-full shadow-xl text-gray-100"
         >
-          Feel the <span className="text-rose-500">Pain</span>
+          Feel the <span className="">Pain</span>
         </button>
       </div>
 
       {/* FLAMES Reveal */}
-      <div className="flex font-jetbrains gap-20 text-4xl font-semibold transition-all">
+      <div className="flex font-jetbrains gap-8  sm:gap-20 text-4xl font-semibold transition-all">
         {flamesLetters.map((letter, idx) => {
           // Determine if this letter is final result letter
           const isFinal = Flames && letter === Object.keys(flamesMap).find(key => flamesMap[key] === Flames);
@@ -224,7 +224,7 @@ const LoveOMeter = () => {
             <span
               key={idx}
               className={`transition-all duration-300 ${
-                isHighlighted || isFinal ? 'text-[#0ADD08] scale-125' : 'text-[#FFC0CB] scale-100'
+                isHighlighted || isFinal ? 'text-rose-500 scale-125' : 'text-[#FFC0CB] scale-100'
               }`}
             >
               {letter}
