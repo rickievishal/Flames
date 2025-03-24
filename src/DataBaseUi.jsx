@@ -29,7 +29,7 @@ const DataBaseUi = () => {
   console.log("Rendered userData:", userData); 
 
   return (
-    <div className='w-screen min-h-screen py-[50px] px-3 tracking-tighter bg-[#FFF7F3]' >    
+    <div className='w-screen min-h-screen py-[50px] overflow-x-hidden px-3 tracking-tighter bg-[#FFF7F3]' >    
             <div className='max-w-xl mx-auto h-full flex flex-col justify-start items-center'>
                     <div>
                       <h1 className='text-4xl tracking-[-3px] text-[#ff7289] mb-[25px]'>
