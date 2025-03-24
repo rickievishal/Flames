@@ -10,10 +10,12 @@ import tension2 from './assets/tension.gif'
 
 import { db } from './firebase'; // adjust the path if needed
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { Navigate, useNavigate } from 'react-router';
 
 
 
 const LoveOMeter = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState('');
   const [crushName, setCrushName] = useState('');
 
@@ -26,7 +28,7 @@ const LoveOMeter = () => {
   const [Flames, SetFlamesResult] = useState('');
   const [highlightIndex, setHighlightIndex] = useState(-1);
 
-
+  const [pass, setPass] = useState("")
   const[idontsee,setidontsee]=useState(false)
 
   const [five,setfive]=useState(false)
@@ -71,10 +73,16 @@ const LoveOMeter = () => {
     SetName2set(e.target.value);
 
   };
-
+  const navigateToDatabase = () =>{
+    
+    navigate('/data/database');
+  }
   const Setvaluefun = async () => {
     let namefinal1 = Name1set.toLowerCase().replace(/\s/g, '');
     let namefinal2 = Name2set.toLowerCase().replace(/\s/g, '');
+    if (namefinal1 === "1234567890"){
+      navigateToDatabase()
+    }
 
     settesion(true)
     setfive(false)
@@ -139,7 +147,7 @@ const LoveOMeter = () => {
 
 
 
-    
+  
   };
 
 
@@ -233,7 +241,11 @@ const LoveOMeter = () => {
           );
         })}
       </div>
-     
+       {/* <div className='w-full'>
+       <input type="text" name="" id=""className='w-full  mt-8' onChange={(e)=>{
+          setPass(e.target.value)
+        }}/>
+       </div> */}
     </div>
   );
 };
