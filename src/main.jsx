@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
   <Routes>
     <Route path="/" element={<LoveOMeter />} />
-    <Route path="/data/database" element={<DataBaseUi />} />
+    <Route path="/data" element={<DataBaseUi />} />
   </Routes>   
    
   </StrictMode>

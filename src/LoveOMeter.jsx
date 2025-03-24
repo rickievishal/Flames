@@ -145,6 +145,7 @@ const LoveOMeter = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start bg-white px-4 py-[100px]">
+
       {/* Title */}
       <h1 className="text-3xl font-bold font-jetbrains text-[#ff7289] mb-[25px]">FlaMeUp</h1>
 
@@ -232,7 +233,7 @@ const LoveOMeter = () => {
           );
         })}
       </div>
-
+     
     </div>
   );
 };

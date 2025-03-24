@@ -36,8 +36,6 @@ const DataBaseUi = () => {
                         CrushBase.
                       </h1>
                     </div>
-
-
                     <div className='w-full border-[1px] border-[#BE5985] rounded-lg '>
                         <div className='w-full flex flex-col justify-start items-center relative'>
                         <div className='row-title text-3xl w-full grid grid-cols-3  bg-[#AC1754] text-[#F7A8C4] rounded-t-lg sticky top-0'>
