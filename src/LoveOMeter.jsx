@@ -207,7 +207,7 @@ const LoveOMeter = () => {
       <div className="py-[50px] pt-[25px] sm:py-[80px] sm:pt-[50px]">
         <button
           onClick={Setvaluefun}
-          className="bg-[#ff6e86] px-6 py-2 font-jetbrains font-bold rounded-r-full rounded-l-full shadow-xl text-gray-100"
+          className="bg-[#ff6e86] px-6 py-2 font-jetbrains font-bold rounded-r-full rounded-l-full shadow-xl text-gray-100 active:scale-95 ease-in-out transition-all duration-150"
         >
           Feel the <span className="">Pain</span>
         </button>
